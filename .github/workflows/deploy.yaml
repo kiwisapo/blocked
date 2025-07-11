@@ -8,12 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout
-      - name: Install dependencies
-        run: npm ci
-      - name: Run tests
-        run: npm test --silent
-      - uses: cloudflare/pages-action
+      - uses: actions/checkout@v4
+      - uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}

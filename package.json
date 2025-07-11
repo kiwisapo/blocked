@@ -1,0 +1,10 @@
+{
+  "name": "blocked",
+  "private": true,
+  "devDependencies": {
+    "htmlhint": "^1.6.3"
+  },
+  "scripts": {
+    "test": "htmlhint \"pages/**/*.html\""
+  }
+}
